@@ -12,5 +12,5 @@ Option Explicit On
 
 
 
-Partial Public Class Contact1
+Partial Public Class Signup
 End Class
