@@ -1,0 +1,715 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>COESyP</RootNamespace>
+    <AssemblyName>COESyP</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44319</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>packages\AspNet.ScriptManager.bootstrap.3.4.1\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.Routing" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\flaticon.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\gijgo.css" />
+    <Content Include="css\magnific-popup.css" />
+    <Content Include="css\nice-select.css" />
+    <Content Include="css\owl.carousel.min.css" />
+    <Content Include="css\reset.css" />
+    <Content Include="css\slicknav.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\theme-default.css" />
+    <Content Include="css\themify-icons.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="edumark\207 Edu mark DOC\css\font-awesome.min.css" />
+    <Content Include="edumark\207 Edu mark DOC\css\main.css" />
+    <Content Include="edumark\207 Edu mark DOC\css\normalize.min.css" />
+    <Content Include="edumark\207 Edu mark DOC\fonts\fontawesome-webfont.svg" />
+    <Content Include="edumark\207 Edu mark DOC\img\logo.png" />
+    <Content Include="edumark\207 Edu mark DOC\index.html" />
+    <Content Include="edumark\207 Edu mark DOC\js\custom.js" />
+    <Content Include="edumark\207 Edu mark DOC\js\jquery-1.11.0.min.js" />
+    <Content Include="edumark\207 Edu mark DOC\js\jquery.nav.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shAutoloader.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushAppleScript.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushAS3.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushBash.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushColdFusion.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushCpp.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushCSharp.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushCss.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushDelphi.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushDiff.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushErlang.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushGroovy.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushJava.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushJavaFX.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushJScript.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushPerl.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushPhp.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushPlain.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushPowerShell.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushPython.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushRuby.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushSass.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushScala.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushSql.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushVb.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shBrushXml.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\scripts\shLegacy.js" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\styles\shCore.css" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\styles\shCoreDefault.css" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\styles\shCoreDjango.css" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\styles\shCoreEclipse.css" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\styles\shCoreEmacs.css" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\styles\shCoreFadeToGrey.css" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\styles\shCoreMDUltra.css" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\styles\shCoreMidnight.css" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\styles\shCoreRDark.css" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\styles\shThemeDefault.css" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\styles\shThemeDjango.css" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\styles\shThemeEclipse.css" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\styles\shThemeEmacs.css" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\styles\shThemeFadeToGrey.css" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\styles\shThemeMDUltra.css" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\styles\shThemeMidnight.css" />
+    <Content Include="edumark\207 Edu mark DOC\syntax-highlighter\styles\shThemeRDark.css" />
+    <Content Include="edumark\about.html" />
+    <Content Include="edumark\blog.html" />
+    <Content Include="edumark\contact.html" />
+    <Content Include="edumark\contact_process.php" />
+    <Content Include="edumark\courses.html" />
+    <Content Include="edumark\course_details.html" />
+    <Content Include="edumark\css\animate.css" />
+    <Content Include="edumark\css\bootstrap.min.css" />
+    <Content Include="edumark\css\flaticon.css" />
+    <Content Include="edumark\css\font-awesome.min.css" />
+    <Content Include="edumark\css\gijgo.css" />
+    <Content Include="edumark\css\magnific-popup.css" />
+    <Content Include="edumark\css\nice-select.css" />
+    <Content Include="edumark\css\owl.carousel.min.css" />
+    <Content Include="edumark\css\reset.css" />
+    <Content Include="edumark\css\slicknav.css" />
+    <Content Include="edumark\css\style.css" />
+    <Content Include="edumark\css\theme-default.css" />
+    <Content Include="edumark\css\themify-icons.css" />
+    <Content Include="edumark\elements.html" />
+    <Content Include="edumark\fonts\fa-brands-400.svg" />
+    <Content Include="edumark\fonts\fa-regular-400.svg" />
+    <Content Include="edumark\fonts\fa-solid-900.svg" />
+    <Content Include="edumark\fonts\flaticon.css" />
+    <Content Include="edumark\fonts\Flaticon.svg" />
+    <Content Include="edumark\fonts\fontawesome-webfont.svg" />
+    <Content Include="edumark\fonts\gijgo-material.svg" />
+    <Content Include="edumark\fonts\themify.svg" />
+    <Content Include="edumark\img\about\1.png" />
+    <Content Include="edumark\img\about\2.png" />
+    <Content Include="edumark\img\banner\banner.png" />
+    <Content Include="edumark\img\banner\bradcam.png" />
+    <Content Include="edumark\img\banner\bradcam2.png" />
+    <Content Include="edumark\img\banner\edu_ilastration.png" />
+    <Content Include="edumark\img\banner\footer_bg.png" />
+    <Content Include="edumark\img\banner\img.png" />
+    <Content Include="edumark\img\blog\author.png" />
+    <Content Include="edumark\img\blog\blog_1.png" />
+    <Content Include="edumark\img\blog\blog_2.png" />
+    <Content Include="edumark\img\blog\blog_3.png" />
+    <Content Include="edumark\img\blog\blog_4.png" />
+    <Content Include="edumark\img\blog\learn_about_bg.png" />
+    <Content Include="edumark\img\blog\single_blog_1.png" />
+    <Content Include="edumark\img\blog\single_blog_2.png" />
+    <Content Include="edumark\img\blog\single_blog_3.png" />
+    <Content Include="edumark\img\blog\single_blog_4.png" />
+    <Content Include="edumark\img\blog\single_blog_5.png" />
+    <Content Include="edumark\img\blog\slide_thumb_1.png" />
+    <Content Include="edumark\img\comment\comment_1.png" />
+    <Content Include="edumark\img\comment\comment_2.png" />
+    <Content Include="edumark\img\comment\comment_3.png" />
+    <Content Include="edumark\img\courses\1.png" />
+    <Content Include="edumark\img\courses\2.png" />
+    <Content Include="edumark\img\courses\3.png" />
+    <Content Include="edumark\img\courses\4.png" />
+    <Content Include="edumark\img\courses\5.png" />
+    <Content Include="edumark\img\courses\6.png" />
+    <Content Include="edumark\img\elements\a.jpg" />
+    <Content Include="edumark\img\elements\a2.jpg" />
+    <Content Include="edumark\img\elements\d.jpg" />
+    <Content Include="edumark\img\elements\disabled-check.png" />
+    <Content Include="edumark\img\elements\disabled-radio.png" />
+    <Content Include="edumark\img\elements\f1.jpg" />
+    <Content Include="edumark\img\elements\f2.jpg" />
+    <Content Include="edumark\img\elements\f3.jpg" />
+    <Content Include="edumark\img\elements\f4.jpg" />
+    <Content Include="edumark\img\elements\f5.jpg" />
+    <Content Include="edumark\img\elements\f6.jpg" />
+    <Content Include="edumark\img\elements\f7.jpg" />
+    <Content Include="edumark\img\elements\f8.jpg" />
+    <Content Include="edumark\img\elements\g1.jpg" />
+    <Content Include="edumark\img\elements\g2.jpg" />
+    <Content Include="edumark\img\elements\g3.jpg" />
+    <Content Include="edumark\img\elements\g4.jpg" />
+    <Content Include="edumark\img\elements\g5.jpg" />
+    <Content Include="edumark\img\elements\g6.jpg" />
+    <Content Include="edumark\img\elements\g7.jpg" />
+    <Content Include="edumark\img\elements\g8.jpg" />
+    <Content Include="edumark\img\elements\primary-check.png" />
+    <Content Include="edumark\img\elements\primary-radio.png" />
+    <Content Include="edumark\img\elements\success-check.png" />
+    <Content Include="edumark\img\elements\success-radio.png" />
+    <Content Include="edumark\img\favicon.ico" />
+    <Content Include="edumark\img\form-logo.png" />
+    <Content Include="edumark\img\latest_blog\1.png" />
+    <Content Include="edumark\img\latest_blog\2.png" />
+    <Content Include="edumark\img\latest_blog\3.png" />
+    <Content Include="edumark\img\latest_blog\author.png" />
+    <Content Include="edumark\img\latest_blog\video.png" />
+    <Content Include="edumark\img\logo.png" />
+    <Content Include="edumark\img\news\1.png" />
+    <Content Include="edumark\img\news\2.png" />
+    <Content Include="edumark\img\news\3.png" />
+    <Content Include="edumark\img\post\next.png" />
+    <Content Include="edumark\img\post\post_1.png" />
+    <Content Include="edumark\img\post\post_10.png" />
+    <Content Include="edumark\img\post\post_2.png" />
+    <Content Include="edumark\img\post\post_3.png" />
+    <Content Include="edumark\img\post\post_4.png" />
+    <Content Include="edumark\img\post\post_5.png" />
+    <Content Include="edumark\img\post\post_6.png" />
+    <Content Include="edumark\img\post\post_7.png" />
+    <Content Include="edumark\img\post\post_8.png" />
+    <Content Include="edumark\img\post\post_9.png" />
+    <Content Include="edumark\img\post\preview.png" />
+    <Content Include="edumark\img\support\support_bg.png" />
+    <Content Include="edumark\img\team\1.png" />
+    <Content Include="edumark\img\team\2.png" />
+    <Content Include="edumark\img\team\3.png" />
+    <Content Include="edumark\img\team\4.png" />
+    <Content Include="edumark\img\team\overlay.png" />
+    <Content Include="edumark\img\testmonial\author_img.png" />
+    <Content Include="edumark\img\testmonial\testmonial.png" />
+    <Content Include="edumark\index.html" />
+    <Content Include="edumark\js\ajax-form.js" />
+    <Content Include="edumark\js\bootstrap.min.js" />
+    <Content Include="edumark\js\contact.js" />
+    <Content Include="edumark\js\gijgo.min.js" />
+    <Content Include="edumark\js\gmap3.min.js" />
+    <Content Include="edumark\js\imagesloaded.pkgd.min.js" />
+    <Content Include="edumark\js\isotope.pkgd.min.js" />
+    <Content Include="edumark\js\jquery.ajaxchimp.min.js" />
+    <Content Include="edumark\js\jquery.counterup.min.js" />
+    <Content Include="edumark\js\jquery.form.js" />
+    <Content Include="edumark\js\jquery.magnific-popup.min.js" />
+    <Content Include="edumark\js\jquery.scrollUp.min.js" />
+    <Content Include="edumark\js\jquery.slicknav.min.js" />
+    <Content Include="edumark\js\jquery.validate.min.js" />
+    <Content Include="edumark\js\mail-script.js" />
+    <Content Include="edumark\js\main.js" />
+    <Content Include="edumark\js\nice-select.min.js" />
+    <Content Include="edumark\js\owl.carousel.min.js" />
+    <Content Include="edumark\js\plugins.js" />
+    <Content Include="edumark\js\popper.min.js" />
+    <Content Include="edumark\js\scrollIt.js" />
+    <Content Include="edumark\js\vendor\jquery-1.12.4.min.js" />
+    <Content Include="edumark\js\vendor\modernizr-3.5.0.min.js" />
+    <Content Include="edumark\js\waypoints.min.js" />
+    <Content Include="edumark\js\wow.min.js" />
+    <Content Include="edumark\main.html" />
+    <Content Include="edumark\readme.txt" />
+    <Content Include="edumark\single-blog.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fa-brands-400.svg" />
+    <Content Include="fonts\fa-regular-400.svg" />
+    <Content Include="fonts\fa-solid-900.svg" />
+    <Content Include="fonts\flaticon.css" />
+    <Content Include="fonts\Flaticon.svg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\gijgo-material.svg" />
+    <Content Include="fonts\themify.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="edumark\207 Edu mark DOC\.vscode\settings.json" />
+    <Content Include="edumark\207 Edu mark DOC\fonts\fontawesome-webfont.eot" />
+    <Content Include="edumark\207 Edu mark DOC\fonts\fontawesome-webfont.ttf" />
+    <Content Include="edumark\207 Edu mark DOC\fonts\fontawesome-webfont.woff" />
+    <Content Include="edumark\207 Edu mark DOC\fonts\FontAwesome.otf" />
+    <Content Include="edumark\css\reset.map" />
+    <Content Include="edumark\css\style.map" />
+    <Content Include="edumark\css\theme-default.map" />
+    <Content Include="edumark\fonts\fa-brands-400.eot" />
+    <Content Include="edumark\fonts\fa-brands-400.ttf" />
+    <Content Include="edumark\fonts\fa-brands-400.woff" />
+    <Content Include="edumark\fonts\fa-brands-400.woff2" />
+    <Content Include="edumark\fonts\fa-regular-400.eot" />
+    <Content Include="edumark\fonts\fa-regular-400.ttf" />
+    <Content Include="edumark\fonts\fa-regular-400.woff" />
+    <Content Include="edumark\fonts\fa-regular-400.woff2" />
+    <Content Include="edumark\fonts\fa-solid-900.eot" />
+    <Content Include="edumark\fonts\fa-solid-900.ttf" />
+    <Content Include="edumark\fonts\fa-solid-900.woff" />
+    <Content Include="edumark\fonts\fa-solid-900.woff2" />
+    <Content Include="edumark\fonts\Flaticon.eot" />
+    <Content Include="edumark\fonts\Flaticon.ttf" />
+    <Content Include="edumark\fonts\Flaticon.woff" />
+    <Content Include="edumark\fonts\Flaticon.woff2" />
+    <Content Include="edumark\fonts\fontawesome-webfont.eot" />
+    <Content Include="edumark\fonts\fontawesome-webfont.ttf" />
+    <Content Include="edumark\fonts\fontawesome-webfont.woff" />
+    <Content Include="edumark\fonts\fontawesome-webfont.woff2" />
+    <Content Include="edumark\fonts\FontAwesome.otf" />
+    <Content Include="edumark\fonts\gijgo-material.eot" />
+    <Content Include="edumark\fonts\gijgo-material.ttf" />
+    <Content Include="edumark\fonts\gijgo-material.woff" />
+    <Content Include="edumark\fonts\themify.eot" />
+    <Content Include="edumark\fonts\themify.ttf" />
+    <Content Include="edumark\fonts\themify.woff" />
+    <Content Include="edumark\scss\style.scss" />
+    <Content Include="edumark\scss\_about.scss" />
+    <Content Include="edumark\scss\_blog.scss" />
+    <Content Include="edumark\scss\_blog_part.scss" />
+    <Content Include="edumark\scss\_bradcam.scss" />
+    <Content Include="edumark\scss\_btn.scss" />
+    <Content Include="edumark\scss\_contact.scss" />
+    <Content Include="edumark\scss\_coures.scss" />
+    <Content Include="edumark\scss\_course_details.scss" />
+    <Content Include="edumark\scss\_elements.scss" />
+    <Content Include="edumark\scss\_extend.scss" />
+    <Content Include="edumark\scss\_faq.scss" />
+    <Content Include="edumark\scss\_footer.scss" />
+    <Content Include="edumark\scss\_gallery.scss" />
+    <Content Include="edumark\scss\_header.scss" />
+    <Content Include="edumark\scss\_latest_blog.scss" />
+    <Content Include="edumark\scss\_mixins.scss" />
+    <Content Include="edumark\scss\_nesletter.scss" />
+    <Content Include="edumark\scss\_popular_courses.scss" />
+    <Content Include="edumark\scss\_reset.scss" />
+    <Content Include="edumark\scss\_responsive.scss" />
+    <Content Include="edumark\scss\_section_title.scss" />
+    <Content Include="edumark\scss\_slick-nav.scss" />
+    <Content Include="edumark\scss\_slider.scss" />
+    <Content Include="edumark\scss\_team.scss" />
+    <Content Include="edumark\scss\_testmonial.scss" />
+    <Content Include="edumark\scss\_varriable.scss" />
+    <Content Include="css\reset.map" />
+    <Content Include="css\style.map" />
+    <Content Include="css\theme-default.map" />
+    <Content Include="fonts\fa-brands-400.eot" />
+    <Content Include="fonts\fa-brands-400.ttf" />
+    <Content Include="fonts\fa-brands-400.woff" />
+    <Content Include="fonts\fa-brands-400.woff2" />
+    <Content Include="fonts\fa-regular-400.eot" />
+    <Content Include="fonts\fa-regular-400.ttf" />
+    <Content Include="fonts\fa-regular-400.woff" />
+    <Content Include="fonts\fa-regular-400.woff2" />
+    <Content Include="fonts\fa-solid-900.eot" />
+    <Content Include="fonts\fa-solid-900.ttf" />
+    <Content Include="fonts\fa-solid-900.woff" />
+    <Content Include="fonts\fa-solid-900.woff2" />
+    <Content Include="fonts\Flaticon.eot" />
+    <Content Include="fonts\Flaticon.ttf" />
+    <Content Include="fonts\Flaticon.woff" />
+    <Content Include="fonts\Flaticon.woff2" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\gijgo-material.eot" />
+    <Content Include="fonts\gijgo-material.ttf" />
+    <Content Include="fonts\gijgo-material.woff" />
+    <Content Include="fonts\themify.eot" />
+    <Content Include="fonts\themify.ttf" />
+    <Content Include="fonts\themify.woff" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="img\about\1.png" />
+    <Content Include="img\about\2.png" />
+    <Content Include="img\banner\banner.png" />
+    <Content Include="img\banner\bradcam.png" />
+    <Content Include="img\banner\bradcam2.png" />
+    <Content Include="img\banner\edu_ilastration.png" />
+    <Content Include="img\banner\footer_bg.png" />
+    <Content Include="img\banner\img.png" />
+    <Content Include="img\blog\author.png" />
+    <Content Include="img\blog\blog_1.png" />
+    <Content Include="img\blog\blog_2.png" />
+    <Content Include="img\blog\blog_3.png" />
+    <Content Include="img\blog\blog_4.png" />
+    <Content Include="img\blog\learn_about_bg.png" />
+    <Content Include="img\blog\single_blog_1.png" />
+    <Content Include="img\blog\single_blog_2.png" />
+    <Content Include="img\blog\single_blog_3.png" />
+    <Content Include="img\blog\single_blog_4.png" />
+    <Content Include="img\blog\single_blog_5.png" />
+    <Content Include="img\blog\slide_thumb_1.png" />
+    <Content Include="img\comment\comment_1.png" />
+    <Content Include="img\comment\comment_2.png" />
+    <Content Include="img\comment\comment_3.png" />
+    <Content Include="img\courses\1.png" />
+    <Content Include="img\courses\2.png" />
+    <Content Include="img\courses\3.png" />
+    <Content Include="img\courses\4.png" />
+    <Content Include="img\courses\5.png" />
+    <Content Include="img\courses\6.png" />
+    <Content Include="img\elements\a.jpg" />
+    <Content Include="img\elements\a2.jpg" />
+    <Content Include="img\elements\d.jpg" />
+    <Content Include="img\elements\disabled-check.png" />
+    <Content Include="img\elements\disabled-radio.png" />
+    <Content Include="img\elements\f1.jpg" />
+    <Content Include="img\elements\f2.jpg" />
+    <Content Include="img\elements\f3.jpg" />
+    <Content Include="img\elements\f4.jpg" />
+    <Content Include="img\elements\f5.jpg" />
+    <Content Include="img\elements\f6.jpg" />
+    <Content Include="img\elements\f7.jpg" />
+    <Content Include="img\elements\f8.jpg" />
+    <Content Include="img\elements\g1.jpg" />
+    <Content Include="img\elements\g2.jpg" />
+    <Content Include="img\elements\g3.jpg" />
+    <Content Include="img\elements\g4.jpg" />
+    <Content Include="img\elements\g5.jpg" />
+    <Content Include="img\elements\g6.jpg" />
+    <Content Include="img\elements\g7.jpg" />
+    <Content Include="img\elements\g8.jpg" />
+    <Content Include="img\elements\primary-check.png" />
+    <Content Include="img\elements\primary-radio.png" />
+    <Content Include="img\elements\success-check.png" />
+    <Content Include="img\elements\success-radio.png" />
+    <Content Include="img\favicon.ico" />
+    <Content Include="img\form-logo.png" />
+    <Content Include="img\latest_blog\1.png" />
+    <Content Include="img\latest_blog\2.png" />
+    <Content Include="img\latest_blog\3.png" />
+    <Content Include="img\latest_blog\author.png" />
+    <Content Include="img\latest_blog\video.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\news\1.png" />
+    <Content Include="img\news\2.png" />
+    <Content Include="img\news\3.png" />
+    <Content Include="img\post\next.png" />
+    <Content Include="img\post\post_1.png" />
+    <Content Include="img\post\post_10.png" />
+    <Content Include="img\post\post_2.png" />
+    <Content Include="img\post\post_3.png" />
+    <Content Include="img\post\post_4.png" />
+    <Content Include="img\post\post_5.png" />
+    <Content Include="img\post\post_6.png" />
+    <Content Include="img\post\post_7.png" />
+    <Content Include="img\post\post_8.png" />
+    <Content Include="img\post\post_9.png" />
+    <Content Include="img\post\preview.png" />
+    <Content Include="img\support\support_bg.png" />
+    <Content Include="img\team\1.png" />
+    <Content Include="img\team\2.png" />
+    <Content Include="img\team\3.png" />
+    <Content Include="img\team\4.png" />
+    <Content Include="img\team\overlay.png" />
+    <Content Include="img\testmonial\author_img.png" />
+    <Content Include="img\testmonial\testmonial.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.vb" />
+    <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="About.aspx.designer.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About.aspx.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.vb">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.vb">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Site.Master.designer.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.vb">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.vb">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.vb">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.vb">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Site.Master" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="ViewSwitcher.ascx" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61995</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44319/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
